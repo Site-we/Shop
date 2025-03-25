@@ -20,9 +20,10 @@
             position: relative;
         }
 
-        header .logo {
-            width: 50px;
-            height: 50px;
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             vertical-align: middle;
         }
 
@@ -63,6 +64,20 @@
 
         .dropdown a:hover {
             background-color: #f4f4f4;
+        }
+
+        .search-bar {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
         }
 
         .items {
@@ -125,21 +140,26 @@
             <a href="javascript:void(0)" onclick="contactUs()">Contact Us</a>
         </div>
     </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search items...">
+    </div>
+
     <main>
         <section class="items">
             <h2>Items Used in Marriage Decoration</h2>
             
             <h3>Flowers</h3>
             <div class="item-container">
-                <div class="item">
+                <div class="item" data-name="Flower Garland">
                     <img src="flower_garland.jpg" alt="Flower Garland">
                     <p>Flower Garland</p>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Roses">
                     <img src="roses.jpg" alt="Roses">
                     <p>Roses</p>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Marigold">
                     <img src="marigold.jpg" alt="Marigold">
                     <p>Marigold</p>
                 </div>
@@ -147,15 +167,15 @@
             
             <h3>Curtains</h3>
             <div class="item-container">
-                <div class="item">
+                <div class="item" data-name="Silk Curtains">
                     <img src="curtains_silk.jpg" alt="Silk Curtains">
                     <p>Silk Curtains</p>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Net Curtains">
                     <img src="curtains_net.jpg" alt="Net Curtains">
                     <p>Net Curtains</p>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Velvet Curtains">
                     <img src="curtains_velvet.jpg" alt="Velvet Curtains">
                     <p>Velvet Curtains</p>
                 </div>
@@ -163,32 +183,30 @@
             
             <h3>Lights</h3>
             <div class="item-container">
-                <div class="item">
+                <div class="item" data-name="Decorative Lights">
                     <img src="decorative_lights.jpg" alt="Decorative Lights">
                     <p>Decorative Lights</p>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Fairy Lights">
                     <img src="fairy_lights.jpg" alt="Fairy Lights">
                     <p>Fairy Lights</p>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Chandeliers">
                     <img src="chandeliers.jpg" alt="Chandeliers">
                     <p>Chandeliers</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 RK Phool Bhandar. All rights reserved.</p>
     </footer>
+
     <script>
         function toggleMenu() {
             var menu = document.getElementById("dropdownMenu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
 
         function contactUs() {
@@ -202,6 +220,20 @@
                 menu.style.display = "none";
             }
         });
+
+        function searchItems() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var items = document.querySelectorAll(".item");
+
+            items.forEach(function(item) {
+                var itemName = item.getAttribute("data-name").toLowerCase();
+                if (itemName.includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
     </script>
 </body>
 </html>
