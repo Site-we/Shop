@@ -19,9 +19,7 @@
             background-color: #ff5722;
             color: white;
             padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            text-align: center;
             position: relative;
         }
 
@@ -29,35 +27,35 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            margin-left: 10px;
+            display: block;
+            margin: 0 auto;
         }
 
         header h1 {
-            flex: 1;
-            margin: 0;
-            font-size: 20px;
-            text-align: center;
+            margin: 10px 0;
+            font-size: 22px;
         }
 
         .search-bar {
-            flex: 1;
-            text-align: right;
-            margin-right: 10px;
+            margin-top: 10px;
         }
 
         .search-bar input {
-            width: 90%;
-            max-width: 200px;
-            padding: 5px;
+            width: 80%;
+            max-width: 400px;
+            padding: 8px;
             border: none;
-            border-radius: 15px;
+            border-radius: 20px;
             font-size: 14px;
+            text-align: center;
         }
 
         .menu {
+            position: absolute;
+            top: 15px;
+            right: 15px;
             font-size: 24px;
             cursor: pointer;
-            margin-right: 10px;
         }
 
         .dropdown {
@@ -86,7 +84,7 @@
             flex: 1;
             padding: 20px;
             text-align: center;
-            padding-bottom: 60px; /* Ensures content is above footer */
+            padding-bottom: 60px;
         }
 
         .items h2 {
