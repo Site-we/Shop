@@ -8,66 +8,39 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="RK Phool Bhandar Logo" class="logo">
-        <h1>RK Phool Bhandar</h1>
-        <p id="phone">Phone: 123-456-7890</p>
-        <div class="menu" onclick="toggleMenu()">&#9776;</div>
-        <div class="dropdown" id="dropdownMenu">
-            <a href="javascript:void(0)" onclick="contactUs()">Contact Us</a>
-        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <div class="logo-container">
+                <img src="logo.png" alt="RK Phool Bhandar Logo" class="logo">
+                <h1>RK Phool Bhandar</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Items</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><span>Phone: 123-456-7890</span></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="items">
             <h2>Items Used in Marriage Decoration</h2>
-            
-            <h3>Flowers</h3>
             <div class="item-container">
                 <div class="item">
                     <img src="flower_garland.jpg" alt="Flower Garland">
                     <p>Flower Garland</p>
                 </div>
                 <div class="item">
-                    <img src="roses.jpg" alt="Roses">
-                    <p>Roses</p>
-                </div>
-                <div class="item">
-                    <img src="marigold.jpg" alt="Marigold">
-                    <p>Marigold</p>
-                </div>
-            </div>
-            
-            <h3>Curtains</h3>
-            <div class="item-container">
-                <div class="item">
-                    <img src="curtains_silk.jpg" alt="Silk Curtains">
-                    <p>Silk Curtains</p>
-                </div>
-                <div class="item">
-                    <img src="curtains_net.jpg" alt="Net Curtains">
-                    <p>Net Curtains</p>
-                </div>
-                <div class="item">
-                    <img src="curtains_velvet.jpg" alt="Velvet Curtains">
-                    <p>Velvet Curtains</p>
-                </div>
-            </div>
-            
-            <h3>Lights</h3>
-            <div class="item-container">
-                <div class="item">
                     <img src="decorative_lights.jpg" alt="Decorative Lights">
                     <p>Decorative Lights</p>
                 </div>
                 <div class="item">
-                    <img src="fairy_lights.jpg" alt="Fairy Lights">
-                    <p>Fairy Lights</p>
+                    <img src="mandap_decoration.jpg" alt="Mandap Decoration">
+                    <p>Mandap Decoration</p>
                 </div>
-                <div class="item">
-                    <img src="chandeliers.jpg" alt="Chandeliers">
-                    <p>Chandeliers</p>
-                </div>
+                <!-- Add more items as needed -->
             </div>
-
         </section>
     </main>
     <footer>
